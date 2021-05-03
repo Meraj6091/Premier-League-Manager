@@ -1,0 +1,24 @@
+<html>
+ <head>
+   <title>Simple registration form</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+
+<div class="main-block">
+<h1>Add Match</h1>
+<form action="/">
+<hr>
+<input type="text"[(ngModel)]="match.date" name="name" id="name" placeholder="Date" required>
+<input type="text" [(ngModel)]="match.teamA" name="name" id="name" placeholder="Team A" required>
+<input type="text"[(ngModel)]="match.teamB" name="name" id="name" placeholder="Team B" required>
+<input type="text"[(ngModel)]="match.teamAScored" name="name" id="name" placeholder="Team A score" required>
+<input type="text"[(ngModel)]="match.teamBScored" name="name" id="name" placeholder="Team B score" required>
+ <hr>
+<div class="btn-block">
+<button type="submit" (click)="addmatch()">Submit</button>
+ </div>
+ <div class="message"><p style="color:red;">{{message}}</p></div>
+</form>
+</div> 
+</html>
