@@ -1,0 +1,38 @@
+
+<body>
+    <div id="wrapper">
+     <h1>Matches</h1>
+  
+     <table id="keywords" cellspacing="0" cellpadding="0">
+       <thead>
+         <tr>
+           <th><span>Team A</span></th>
+           <th><span>VS</span></th>
+           <th><span>Team B</span></th>
+           <th><span>Team A Score</span></th>
+           <th><span>Team B Score</span></th>
+           <th><span>Day</span></th>
+           <th><span>Month</span></th>
+           <th><span>Year</span></th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let searchmatch of viewmatches">
+           <td>{{searchmatch.teamA}}</td>
+           <td>VS</td>
+           <td>{{searchmatch.teamB}}</td>
+           <td>{{searchmatch.teamAScored}}</td>
+           <td>{{searchmatch.teamBScored}}</td>
+           <td>{{searchmatch.day}}</td>
+           <td>{{searchmatch.month}}</td>
+           <td>{{searchmatch.year}}</td>
+         </tr>
+       </tbody>
+     </table>
+    </div> 
+ <hr>
+<div class="btn-block">
+<input type="text"[(ngModel)]="search.date" name="name" id="name" placeholder="Date" required>
+<button type="submit" (click)="SeatchMatch(); refresh()" style="margin-left :10px; background-color: #A9CCE3"  >Submit</button>
+ </div>
+   </body>

@@ -1,0 +1,31 @@
+<body>
+    <div id="wrapper">
+     <h1>Matches</h1>
+     <table id="keywords" cellspacing="0" cellpadding="0">
+       <thead>
+         <tr>
+           <th><span>Team A</span></th>
+           <th><span>VS</span></th>
+           <th><span>Team B</span></th>
+           <th><span>Team A Score</span></th>
+           <th><span>Team B Score</span></th>
+           <th><span>Day</span></th>
+           <th><span>Month</span></th>
+           <th><span>Year</span></th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let viewMatches of viewmatches">
+           <td>{{viewMatches.teamA}}</td>
+           <td>VS</td>
+           <td>{{viewMatches.teamB}}</td>
+           <td>{{viewMatches.teamAScored}}</td>
+           <td>{{viewMatches.teamBScored}}</td>
+           <td>{{viewMatches.day}}</td>
+           <td>{{viewMatches.month}}</td>
+           <td>{{viewMatches.year}}</td>
+         </tr>
+       </tbody>
+     </table>
+    </div> 
+   </body>
