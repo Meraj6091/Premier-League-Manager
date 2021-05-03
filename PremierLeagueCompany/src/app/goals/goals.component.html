@@ -1,0 +1,40 @@
+
+<body>
+    <div id="wrapper">
+     <h1>Premier League Table</h1>
+  
+     <table id="keywords" cellspacing="0" cellpadding="0">
+       <thead>
+         <tr>
+           <th><span>ClubName</span></th>
+           <th><span>Location</span></th>
+           <th><span>ScoredGoals</span></th>
+           <th><span>ReceivedGoals</span></th>
+           <th><span>Wins</span></th>
+           <th><span>Draws</span></th>
+           <th><span>Defeats</span></th>
+           <th><span>Points</span></th>
+           <th><span>MatchesPlayed</span></th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr *ngFor="let goals of Goal">
+           <td>{{goals.name}}</td>
+           <td>{{goals.location}}</td>
+           <td>{{goals.scoredGoalsCount}}</td>
+           <td>{{goals.receivedGoalsCount}}</td>
+           <td>{{goals.wins}}</td>
+           <td>{{goals.draws}}</td>
+           <td>{{goals.defeats}}</td>
+           <td>{{goals.currentlyPoints}}</td>
+           <td>{{goals.matchesPlayed}}</td>
+         </tr>
+       </tbody>
+     </table>
+    </div> 
+    <div class="btn-group">
+        <a routerLink="/wins"><button style="margin-left :10px">Sort By Wins</button></a>
+        <a routerLink="/goals"><button style="margin-left :150px">Sort By Goals</button></a>
+    </div>
+   </body>
+  

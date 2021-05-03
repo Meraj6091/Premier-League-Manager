@@ -1,0 +1,39 @@
+<body>
+    <div id="wrapper">
+     <h1>Premier League Table</h1>
+     <table id="keywords" cellspacing="0" cellpadding="0">
+       <thead>
+         <tr>
+           <th><span>ClubName</span></th>
+           <th><span>Location</span></th>
+           <th><span>ScoredGoals</span></th>
+           <th><span>ReceivedGoals</span></th>
+           <th><span>Wins</span></th>
+           <th><span>Draws</span></th>
+           <th><span>Defeats</span></th>
+           <th><span>Points</span></th>
+           <th><span>MatchesPlayed</span></th>
+         </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <tr *ngFor="let premierleaguetable of premierleaguetables">
+           <td>{{premierleaguetable.name}}</td>
+           <td>{{premierleaguetable.location}}</td>
+           <td>{{premierleaguetable.scoredGoalsCount}}</td>
+           <td>{{premierleaguetable.receivedGoalsCount}}</td>
+           <td>{{premierleaguetable.wins}}</td>
+           <td>{{premierleaguetable.draws}}</td>
+           <td>{{premierleaguetable.defeats}}</td>
+           <td>{{premierleaguetable.currentlyPoints}}</td>
+           <td>{{premierleaguetable.matchesPlayed}}</td>
+         </tr>
+       </tbody>
+     </table>
+    </div> 
+    <div class="btn-group">
+      <a routerLink="/wins"><button style="margin-left :10px">Sort By Wins</button></a>
+      <a routerLink="/goals"><button style="margin-left :150px">Sort By Goals</button></a>
+    </div>
+   </body>
+   
